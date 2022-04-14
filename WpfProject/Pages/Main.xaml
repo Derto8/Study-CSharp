@@ -1,0 +1,23 @@
+﻿<Page x:Class="WpfProject.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfProject.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Grid Background="Wheat">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid OpacityMask="#FF553D3A" Background="#FF553D3A" Height="100" VerticalAlignment="Top">
+            <Button Content="Выход" Margin="0,31,10,0" VerticalAlignment="Top" Background="Wheat" Height="28" Click="Exit" Foreground="#FF553D3A" FontFamily="Helvetica" FontSize="12" HorizontalAlignment="Right" Width="68"/>
+            <Label Content="Проект с моими идеями для самообучения" FontFamily="Helvetica" FontSize="16" Foreground="Wheat" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+        <Button Content="Генератор паролей" Margin="38,123,0,0" VerticalAlignment="Top" Click="OpenGenerator" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
+
+    </Grid>
+</Page>

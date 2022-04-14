@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "FG5DVXxFrstn6mitPdYMYtF/llTrDbvP4AU/S5hKD2iKzAiyct0+UizraVsQmeijUpubJeZmOY+zDTSTtmYOtQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Николай\\source\\repos\\WpfProject\\WpfProject\\WpfProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Николай\\.nuget\\packages\\anglesharp\\0.16.1\\anglesharp.0.16.1.nupkg.sha512",
+    "C:\\Users\\Николай\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Николай\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Николай\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
