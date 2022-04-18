@@ -59,7 +59,7 @@ namespace WpfProject.Pages.Tasks
                         while (amount != 0)
                         {
                             // записываю текст в поток
-                            output.Write($"{j} - Пароль: " + pgen.StartGeneration() + "\n");
+                            output.Write($"{j} - Пароль: {pgen.StartGeneration()} \n");
                             j++;
                             amount--;
                         }

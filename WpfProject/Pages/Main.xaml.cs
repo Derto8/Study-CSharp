@@ -40,5 +40,10 @@ namespace WpfProject.Pages
         {
             mainWindow.OpenPage(MainWindow.pages.generate);
         }
+
+        private void OpenDB(object sender, RoutedEventArgs e)
+        {
+            mainWindow.OpenPage(MainWindow.pages.database);
+        }
     }
 }

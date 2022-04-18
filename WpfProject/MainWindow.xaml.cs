@@ -24,21 +24,29 @@ namespace WpfProject
         {
             InitializeComponent();
             OpenPage(pages.main);
-            
         }
 
         public enum pages
         {
             main,
-            generate
+            generate,
+            database,
+            auth,
+            regist
         }
 
         public void OpenPage(pages _pages)
         {
             if (_pages == pages.main)
                 frame.Navigate(new Pages.Main(this));
-            if (_pages == pages.generate)
+            else if (_pages == pages.generate)
                 frame.Navigate(new Pages.Tasks.GeneratePasswords(this));
+            else if (_pages == pages.database)
+                frame.Navigate(new Pages.Tasks.DataBase(this));
+            else if (_pages == pages.auth)
+                frame.Navigate(new Pages.Tasks.Authorization(this));
+            else if (_pages == pages.regist)
+                frame.Navigate(new Pages.Tasks.Registration(this));
         }
     }
 }

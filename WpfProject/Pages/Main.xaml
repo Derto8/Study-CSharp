@@ -18,6 +18,7 @@
             <Label Content="Проект с моими идеями для самообучения" FontFamily="Helvetica" FontSize="16" Foreground="Wheat" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
         </Grid>
         <Button Content="Генератор паролей" Margin="38,123,0,0" VerticalAlignment="Top" Click="OpenGenerator" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
+        <Button Content="База данных" Margin="38,170,0,0" VerticalAlignment="Top" Click="OpenDB" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
 
     </Grid>
 </Page>

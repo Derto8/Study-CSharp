@@ -10,7 +10,16 @@
     <Compile Update="Pages\Main.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\Tasks\Authorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\DataBase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\Tasks\GeneratePasswords.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,7 +30,16 @@
     <Page Update="Pages\Main.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Pages\Tasks\Authorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\DataBase.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Pages\Tasks\GeneratePasswords.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
