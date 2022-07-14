@@ -10,10 +10,13 @@
     <Compile Update="Pages\Main.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Tasks\Authorization.xaml.cs">
+    <Compile Update="Pages\Tasks\After auth\AdminConsole.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages\Tasks\DataBase.xaml.cs">
+    <Compile Update="Pages\Tasks\After auth\AfterAuth.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\Authorization.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Pages\Tasks\GeneratePasswords.xaml.cs">
@@ -30,10 +33,13 @@
     <Page Update="Pages\Main.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Tasks\Authorization.xaml">
+    <Page Update="Pages\Tasks\After auth\AdminConsole.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Pages\Tasks\DataBase.xaml">
+    <Page Update="Pages\Tasks\After auth\AfterAuth.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\Authorization.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\Tasks\GeneratePasswords.xaml">

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using WpfProject.Pages.Classies;
 
 namespace WpfProject.Pages.Tasks
 {
@@ -59,12 +60,22 @@ namespace WpfProject.Pages.Tasks
                         while (amount != 0)
                         {
                             // записываю текст в поток
-                            output.Write($"{j} - Пароль: {pgen.StartGeneration()} \n");
+                            output.Write($"{j} - Пароль: {pgen.GeneratePasswords()} \n");
                             j++;
                             amount--;
                         }
                         output.Close();
-                        Rez.Content = "Пароли записаны в ваш файл";
+                        //Rez.Content = "Пароли записаны в ваш файл";
+
+                        string sign = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+№;%:?*-+=[]./|<>{}";
+                        if (amount > 1)
+                        {
+                            Rez.Content = "Пароли были сгенерированы";
+                        }
+                        else
+                        {
+                            Rez.Content = "Пароль был сгенерирован";
+                        }
                     }
                 }
             }

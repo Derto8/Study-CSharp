@@ -6,19 +6,20 @@
       xmlns:local="clr-namespace:WpfProject.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Main">
+      Title="Главное окно">
 
     <Grid Background="Wheat">
         <Grid.RowDefinitions>
-            <RowDefinition Height="19*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid OpacityMask="#FF553D3A" Background="#FF553D3A" Height="100" VerticalAlignment="Top">
             <Button Content="Выход" Margin="0,31,10,0" VerticalAlignment="Top" Background="Wheat" Height="28" Click="Exit" Foreground="#FF553D3A" FontFamily="Helvetica" FontSize="12" HorizontalAlignment="Right" Width="68"/>
             <Label Content="Проект с моими идеями для самообучения" FontFamily="Helvetica" FontSize="16" Foreground="Wheat" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
         </Grid>
-        <Button Content="Генератор паролей" Margin="38,123,0,0" VerticalAlignment="Top" Click="OpenGenerator" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
-        <Button Content="База данных" Margin="38,170,0,0" VerticalAlignment="Top" Click="OpenDB" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
+        <Button Content="Сгенерировать пароль" Margin="28,255,0,0" VerticalAlignment="Top" Click="OpenGenerator" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Height="30" HorizontalAlignment="Left" Width="185"/>
+        <Button Content="Войти в кабинет" Click="OpenAuth" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Margin="28,138,0,0" HorizontalAlignment="Left" Width="185" Height="30" VerticalAlignment="Top"/>
+        <Button Content="Регистрация" Click="OpenReg" Background="#FF553D3A" Foreground="Wheat" FontFamily="Helvetica" FontSize="14" Margin="28,195,0,0" HorizontalAlignment="Left" Width="185" Height="30" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

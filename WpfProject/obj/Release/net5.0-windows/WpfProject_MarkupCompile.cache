@@ -1,0 +1,20 @@
+﻿WpfProject
+
+
+winexe
+C#
+.cs
+C:\Users\Николай\source\repos\WpfProject\WpfProject\obj\Release\net5.0-windows\
+WpfProject
+none
+false
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
+C:\Users\Николай\source\repos\WpfProject\WpfProject\App.xaml
+7-1374053750
+
+12394318871
+1981402387632
+MainWindow.xaml;Pages\Main.xaml;Pages\Tasks\After auth\AdminConsole.xaml;Pages\Tasks\After auth\AfterAuth.xaml;Pages\Tasks\Authorization.xaml;Pages\Tasks\GeneratePasswords.xaml;Pages\Tasks\Registration.xaml;
+
+True
+

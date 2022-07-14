@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Николай\source\repos\WpfProject\WpfProject\App.xaml
-6559301236
+7-1374053750
 
-121639087151
-1951614855302
-MainWindow.xaml;Pages\Main.xaml;Pages\Tasks\Authorization.xaml;Pages\Tasks\DataBase.xaml;Pages\Tasks\GeneratePasswords.xaml;Pages\Tasks\Registration.xaml;
+14-459954308
+1981402387632
+MainWindow.xaml;Pages\Main.xaml;Pages\Tasks\After auth\AdminConsole.xaml;Pages\Tasks\After auth\AfterAuth.xaml;Pages\Tasks\Authorization.xaml;Pages\Tasks\GeneratePasswords.xaml;Pages\Tasks\Registration.xaml;
 
 False
 

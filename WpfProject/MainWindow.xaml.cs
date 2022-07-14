@@ -30,9 +30,10 @@ namespace WpfProject
         {
             main,
             generate,
-            database,
             auth,
-            regist
+            reg,
+            afterAuth,
+            AdminConsole
         }
 
         public void OpenPage(pages _pages)
@@ -41,12 +42,14 @@ namespace WpfProject
                 frame.Navigate(new Pages.Main(this));
             else if (_pages == pages.generate)
                 frame.Navigate(new Pages.Tasks.GeneratePasswords(this));
-            else if (_pages == pages.database)
-                frame.Navigate(new Pages.Tasks.DataBase(this));
             else if (_pages == pages.auth)
                 frame.Navigate(new Pages.Tasks.Authorization(this));
-            else if (_pages == pages.regist)
+            else if (_pages == pages.reg)
                 frame.Navigate(new Pages.Tasks.Registration(this));
+            else if (_pages == pages.afterAuth)
+                frame.Navigate(new Pages.Tasks.After_auth.AfterAuth(this));
+            else if (_pages == pages.AdminConsole)
+                frame.Navigate(new Pages.Tasks.After_auth.AdminConsole(this));
         }
     }
 }

@@ -4,66 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfProject.Pages
+namespace WpfProject.Pages.Classies
 {
     class PasswordGen
     {
-        string alphabet = "abcdefghijklmnopqrstuvwxyz";
-        string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        string numbers = "1234567890";
-        string specialSymbols = "~`!@#$%^&*()_+№;%:?*-+=[]./|<>{}";
+        const string sign = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+№;%:?*-+=[]./|<>{}";
 
-        string password;
-        private int Lenght { get; set; }
+        private int lenght { get; set; }
 
-
-        public string StartGeneration()
+        public PasswordGen(int lenght)
         {
-            GeneratePasswords();
-            return password;
+            this.lenght = lenght;
         }
 
-        public PasswordGen(int a)
+        public string GeneratePasswords()
         {
-            Lenght = a;
-        }
-
-        private void GeneratePasswords()
-        {
-            password = "";
+            string password = "";
             Random rnd = new Random();
-            for (int i = 0; i < Lenght; i++)
-            {
-                //создаю переменную выборки переменной знаков
-                int randomChoosing = rnd.Next(0, 3);
-                //присваивает себе переменную со знаками
-                string signChoosing;
-                //отвечает на индекс знака
-                int signIndex;
-                if (randomChoosing == 0)
-                {
-                    signChoosing = alphabet;
-                    signIndex = rnd.Next(0, 25);
-                }
-                else if (randomChoosing == 1)
-                {
-                    signChoosing = ALPHABET;
-                    signIndex = rnd.Next(0, 25);
-                }
-                else if (randomChoosing == 2)
-                {
-                    signChoosing = numbers;
-                    signIndex = rnd.Next(0, 9);
-                }
-                else
-                {
-                    signChoosing = specialSymbols;
-                    signIndex = rnd.Next(0, 31);
-                }
-                //добавление знака в основную переменную
-                password += signChoosing[signIndex];
 
+            for(int i = 0; i < lenght; i++)
+            {
+                    //создаю переменную выборки индекса знака
+                    int signIndex = rnd.Next(0, 91);
+                    //добавление знака в основную переменную
+                    password += sign[signIndex];
             }
+            return password;
+
+        }
+
+        public bool CheckPassNum(string pass)
+        {
+            for (int i = 0; i < pass.Length; i++)
+            {
+                if (pass[i] >= '0' && pass[i] <= '9')
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool CheckPassAlph(string pass)
+        {
+            if (pass.Any(x => char.IsUpper(x)))
+                return true;
+            else
+                return false;
         }
     }
 }

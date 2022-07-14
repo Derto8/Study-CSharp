@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
 using System.Data;
+using WpfProject.Pages.Classies;
 
 namespace WpfProject.Pages.Tasks
 {
@@ -46,21 +47,64 @@ namespace WpfProject.Pages.Tasks
                         string login = tb_log.Text;
                         string password = pass.Password;
                         string passRep = passRepeat.Password;
+                        string status = "User";
+
+                        if(login.Length < 6 || login.Length > 16 )
+                        {
+                            Rez.Content = "Логин должен быть не менее 6 знаков, и не более 16 знаков";
+                            return;
+                        }
+
+                        //проверка пароля
                         if(password != passRep)
                         {
                             Rez.Content = "Введенные пароли не совпадают";
                             return;
                         }
+
+                        if(password.Length < 6)
+                        {
+                            Rez.Content = "Пароль должен быть не менее 6 знаков";
+                            return;
+                        }
+
+                        Random rd = new Random();
+                        
+                        PasswordGen pgen = new PasswordGen(rd.Next(6, 12));
+
+                        bool checkNum = pgen.CheckPassNum(password);
+                        bool checkAlph = pgen.CheckPassAlph(password);
+
+                        if(!checkNum)
+                        {
+                            Rez.Content = "Пароль должен содержать цифры!";
+                            return;
+                        }
+                        if (!checkAlph)
+                        {
+                            Rez.Content = "Пароль должен содержать хотя бы одну заглавную букву!";
+                            return;
+                        }
+
                         if (isUserExists())
                             return;
 
-                        Classies.DataBaseCL db = new Classies.DataBaseCL();
 
-                        MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `password`) VALUES (@regL, @regP)", db.getConnection());
+
+
+
+                        //Объект ранее созданного класса DataBaseCL
+                        DataBaseConnection db = new DataBaseConnection();
+
+
+                        //добавление пользователя
+                        MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `password`, `status`) VALUES (@regL, @regP, @regS)", db.GetConnection());
                         command.Parameters.Add("@regL", MySqlDbType.VarChar).Value = login;
                         command.Parameters.Add("@regP", MySqlDbType.VarChar).Value = password;
+                        command.Parameters.Add("@regS", MySqlDbType.VarChar).Value = status;
 
-                        db.openConnection();
+                        //
+                        db.OpenConnection();
                         if(command.ExecuteNonQuery() == 1)
                         {
                             Rez.Content = "Юзер создан";
@@ -72,7 +116,7 @@ namespace WpfProject.Pages.Tasks
                         }
 
 
-                        db.closeConnection();
+                        db.CloseConnection();
 
 
                     }
@@ -80,22 +124,23 @@ namespace WpfProject.Pages.Tasks
             }
         }
 
-        public Boolean isUserExists()
+        //проверка, на наличие пользователя в бд с таким же логином
+        public bool isUserExists()
         {
             string login = tb_log.Text;
-            Classies.DataBaseCL db = new Classies.DataBaseCL();
+            DataBaseConnection db = new DataBaseConnection();
             DataTable table = new DataTable();
 
             MySqlDataAdapter adapter = new MySqlDataAdapter();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.getConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL", db.GetConnection());
             command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = login;
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
             if (table.Rows.Count > 0)
             {
-                Rez.Content = "Пользователь с таким же логином уже существует";
+                Rez.Content = "Пользователь с таким же логином уже существует!";
                 return true;
             }
             else
@@ -108,7 +153,6 @@ namespace WpfProject.Pages.Tasks
         private void Auth(object sender, RoutedEventArgs e)
         {
             mainWindow.OpenPage(MainWindow.pages.auth);
-
         }
     }
 }

@@ -41,9 +41,14 @@ namespace WpfProject.Pages
             mainWindow.OpenPage(MainWindow.pages.generate);
         }
 
-        private void OpenDB(object sender, RoutedEventArgs e)
+        private void OpenAuth(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.pages.database);
+            mainWindow.OpenPage(MainWindow.pages.auth);
+        }
+
+        private void OpenReg(object sender, RoutedEventArgs e)
+        {
+            mainWindow.OpenPage(MainWindow.pages.reg);
         }
     }
 }
