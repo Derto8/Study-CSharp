@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\Main.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AdminConsole\AdminConsole.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AdminConsole\InformationDB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AdminConsole\ManipulationsDB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AfterAuth.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AfterAuthUser\ASCIIPicture.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\AfterAuth\AfterAuthUser\Calculator.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\Authorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\GeneratePasswords.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Tasks\Registration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Main.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AdminConsole\AdminConsole.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AdminConsole\InformationDB.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AdminConsole\ManipulationsDB.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AfterAuth.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AfterAuthUser\ASCIIPicture.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\AfterAuth\AfterAuthUser\Calculator.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\Authorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\GeneratePasswords.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Tasks\Registration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
