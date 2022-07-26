@@ -13,7 +13,7 @@
 ## About
 
 A project with my ideas for learning C# WPF. Implemented in the project:
--  Window transition system.
+-  System transition between windows of a WPF application.
 -  User registration system.
 -  Administrator console, with which you can change the data in the data table, delete and add rows in the data table.
 -  Convert the picture to ASCII table characters.
