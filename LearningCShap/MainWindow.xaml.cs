@@ -8,7 +8,7 @@ namespace LearningCShap
         public MainWindow()
         {
             InitializeComponent();
-            OpenPage(pages.ASCIIPicture);
+            OpenPage(pages.main);
         }
 
         public enum pages
