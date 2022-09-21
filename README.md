@@ -1,5 +1,5 @@
 <p align="center">
-      <img src="https://i.ibb.co/d0vxGB0/WPF.png" alt="WPF Project" width="726">
+      <img src="https://ibb.co/Kjt8bVk" alt="WPF Project" width="726">
 </p>
 
 <p align="center">
