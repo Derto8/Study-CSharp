@@ -1,8 +1,4 @@
 <p align="center">
-      <img src="https://ibb.co/Kjt8bVk" alt="WPF Project" width="726">
-</p>
-
-<p align="center">
    <img src="https://img.shields.io/badge/VisualStudio-2022-blueviolet" alt="IDE Version">
    <img src="https://img.shields.io/badge/.NETCore-3.1-brightgreen" alt=".NET Version">
    <img src="https://img.shields.io/badge/MySQL%20Version-5.6.37-blue" alt="MySQL Version">
